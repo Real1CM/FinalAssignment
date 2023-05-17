@@ -5,11 +5,10 @@ import java.util.Scanner;
 public class Symptom {
     public Scanner scanner = new Scanner(System.in);
     public Detail detail;
-    public final int symptomSum = 0;
 
-    public void selectSymptom(String symptom) {
-        switch (symptom) {
-            case "发热": {
+    public void selectSymptom(int i) {
+        switch (i) {
+            case 1: {
                 System.out.println("目前提问时体温是否大于37.3?(1表示是,0表示否)");
                 int temperatureNow = scanner.nextInt();
                 detail.symptom(temperatureNow);
@@ -27,38 +26,38 @@ public class Symptom {
                 detail.symptom(feverMedicine);
                 break;
             }
-            case "咽喉痛":
+            case 2:
                 break;
-            case "咳嗽": {
+            case 3: {
                 System.out.println("有没有咳痰?(1表示是,0表示否)");
                 int cough = scanner.nextInt();
                 detail.symptom(cough);
                 break;
             }
-            case "鼻塞":
+            case 4:
                 break;
 
-            case "流鼻涕":
+            case 5:
                 break;
-            case "胸闷": {
+            case 6: {
                 System.out.println("有没有胸闷加重?(1表示是,0表示否)");
                 int tightChest = scanner.nextInt();
                 detail.symptom(tightChest);
                 break;
             }
-            case "气急": {
+            case 7: {
                 System.out.println("有没有气急加重?(1表示是,0表示否)");
                 int shortBreath = scanner.nextInt();
                 detail.symptom(shortBreath);
                 break;
             }
-            case "呼吸困难":
+            case 8:
                 break;
-            case "全身酸痛":
+            case 9:
                 break;
-            case "乏力":
+            case 10:
                 break;
-            case "腹泻": {
+            case 11: {
                 System.out.println("有没有腹泻加重?(1表示是,0表示否)");
                 int diarhea = scanner.nextInt();
                 detail.symptom(diarhea);
@@ -67,5 +66,12 @@ public class Symptom {
             default:
                 break;
         }
+    }
+
+    public int contactHistory(int i) {
+        if (i <= 4)
+            return 1;
+        else
+            return 0;
     }
 }
