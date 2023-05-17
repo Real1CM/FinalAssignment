@@ -70,8 +70,8 @@ public class Symptom {
 
     public int contactHistory(int i) {
         if (i <= 4)
-            return 1;
-        else
             return 0;
+        else
+            return 1;
     }
 }

@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Main {
     public Scanner scanner = new Scanner(System.in);
     public Symptom symptom = new Symptom();
-
     public int symptonflag = 0, contactflag = 0;
 
     public int giveSuggestion() {
