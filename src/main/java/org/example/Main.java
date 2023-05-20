@@ -3,22 +3,26 @@ package org.example;
 import java.util.Scanner;
 
 public class Main {
-    public Scanner scanner = new Scanner(System.in);
-    public Symptom symptom = new Symptom();
-    public int symptonflag = 0, contactflag = 0;
+//    public Scanner scanner = new Scanner(System.in);
+//    public Symptom symptom = new Symptom();
+//    public int symptonflag = 0, contactflag = 0;
 
-    public int giveSuggestion() {
+    public int giveSuggestion(int symptonChosen, int contactChosen) {
+        Symptom symptom = new Symptom();
+        int symptonflag = 0, contactflag = 0;
+
         System.out.println("是否有以下症状?");
         System.out.println("1.发热、2.咽喉痛、3.咳嗽、4.鼻塞、5.流鼻涕、6.胸闷、");
         System.out.println("7.气急、8.呼吸困难、9.全身酸痛、10.乏力、11.腹泻、12.都没有");
         System.out.println("如有症状请输入对应数字:");
-        int symptonChosen = scanner.nextInt();
+//        int symptonChosen = scanner.nextInt();
         int num = 11; //循环次数,最多11次
         if (symptonChosen != 12) {
             while (num > 0) {
                 symptom.selectSymptom(symptonChosen);
                 System.out.println("是否还有其他症状(按0退出)");
-                int symptonChosen2 = scanner.nextInt();
+//                int symptonChosen2 = scanner.nextInt();
+                int symptonChosen2 = 0;
                 if (symptonChosen2 == 0)
                     break;
                 num--;
@@ -32,13 +36,14 @@ public class Main {
                 "4.\t身边有多人出现发热、乏力、咳嗽、咽痛等\n" +
                 "5.\t都没有\n");
         System.out.println("请输入对应数字:");
-        int contactChosen = scanner.nextInt();
+//        int contactChosen = scanner.nextInt();
         int num2 = 4; //循环次数,最多11次
         if (contactChosen != 5) {
             while (num2 > 0) {
                 symptom.selectSymptom(contactChosen);
                 System.out.println("是否还有其他症状(按0退出)");
-                int contactChosen2 = scanner.nextInt();
+//                int contactChosen2 = scanner.nextInt();
+                int contactChosen2 = 0;
                 if (contactChosen2 == 0)
                     break;
                 num2--;
